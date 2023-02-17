@@ -1,0 +1,22 @@
+apply plugin: 'maven-publish'
+
+publishing {
+    publications {
+        maven(MavenPublication){
+            artifact("build/libs/my-app-$version"+".jar"){
+                extension 'jar'
+            }
+        }
+    }
+}
+
+repositories {
+    maven {
+        name 'nexus'
+        url "http://206.189.134.181:8081/repository/maven-snapshots/"
+        credentials{
+            username project.repoUser
+            password project.repoPassword
+        }
+    }
+}
