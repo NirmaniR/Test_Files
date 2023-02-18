@@ -1,4 +1,8 @@
 This is text file number 01
 Rechecking again
 Testing rebase 
+<<<<<<< HEAD
 Adding same line to the file and changing from local
+=======
+Adding same line to the file and changing from local and amend the commit
+>>>>>>> 63794ab (Recorrect wording)
